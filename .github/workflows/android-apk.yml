@@ -41,10 +41,11 @@ jobs:
           test -f la-peste-cu-fanel/frontend/package.json
 
       - name: Install dependencies
-        working-directory: la-peste-cu-fanel/frontend
-        run: |
-          corepack enable
-          yarn install --frozen-lockfile
+  working-directory: la-peste-cu-fanel/frontend
+  run: |
+    chmod +x ./scripts/cmd-guard.js
+    corepack enable
+    yarn install --frozen-lockfile
 
       - name: Generate Android project
         working-directory: la-peste-cu-fanel/frontend
