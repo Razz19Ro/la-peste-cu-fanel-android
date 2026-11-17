@@ -52,10 +52,10 @@ jobs:
 
       - name: Build APK
         working-directory: la-peste-cu-fanel/frontend/android
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleRelease
 
       - uses: actions/upload-artifact@v4
         with:
           name: La-Peste-cu-Fanel-APK
-          path: la-peste-cu-fanel/frontend/android/app/build/outputs/apk/debug/app-debug.apk
+          path: la-peste-cu-fanel/frontend/android/app/build/outputs/apk/release/app-release.apk
           retention-days: 30
